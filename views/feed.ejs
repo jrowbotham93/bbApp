@@ -2,19 +2,21 @@
 <html>
     <head>
         <title>Feed</title>
-        <link href= "style.css" rel="stylesheet" type="text/css" />
-
-        
-           
+        <link href= "style.css" rel="stylesheet" type="text/css" />        
     </head>
-    <body>
-            <h1>Bulletin Board</h1>
-            <% input.forEach(function(input){ %>
-                <li> <%= input %></li> 
-                <% }); %>
-    
-    </body>
+        <body>
+            <table>
+           
+           
+
+             <% empty.forEach(function(result){ %>
+                
+                <li><%= result.title %></li>
+                <li><%= result.body  %></li>
+                    <% }); %>
+
+            </table>
+        </body>
     <footer>
-          
-        </footer>
+    </footer>
 </html> 
