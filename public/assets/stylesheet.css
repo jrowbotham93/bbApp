@@ -1,0 +1,30 @@
+
+
+.container {
+    flex-basis: 32%;
+    height: 450px;
+    margin: auto;
+    padding-top: 41px;
+    background-color: teal
+  }
+
+.form {
+
+  flex-basis: 60%;
+  width: 280px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto; 
+
+}
+
+.input1 {
+    width: 200px;
+    height: 50%;
+
+}
+
+.input2 {
+    width: 400px;
+    height: 250px;
+
+}
