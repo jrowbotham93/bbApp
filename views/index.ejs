@@ -2,29 +2,31 @@
 <html>
     <head>
         <title>
-            Bulletin Board
+            Creative Board
         </title>
         <link href= "/public/assets/stylesheet.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+            
             <ul class ="ul">
                     <li class= "li"><a class="active" href="#home">Home</a></li>
-                    <li class= "li"><a href="#news">News</a></li>
+                    <li class= "li"><a href="#news">Feed</a></li>
                 
             </ul>
 
-        <h1>Bulletin Board</h1>
+    <div class="parallax"></div>
     <div class= "container">
         
-            <div class ="form">
-                <form action= '/index' method='post'>
-                    <input type= "text" class= "input1" placeholder= "title" name='title'>
+            <div class="form-group">
+                <form action= '/feed' method='post'>
+                    <input type= "text" for="dynamic-label-input" placeholder= "Enter Your Title Here" name='title'><label for="dynamic-label-input">Keep it short and snappy</label>
                     <br><br>
-                    <input type= "text" class= "input2" placeholder= "body" name='body'>
+                    <input type= "text" for="dynamic-label-input" placeholder= "Message" name='body'placeholder= "Enter Your Title Here" name='title'><label for="dynamic-label-input">Get creative</label>
                     <br><br>
-                    <input type='submit' placeholder='submit'>
+                    <input type='submit' class="li" placeholder='submit'>
                 </form>      
-        </div>
+        </div></div>
+    <div class="parallax"></div>
 
 
     </body>

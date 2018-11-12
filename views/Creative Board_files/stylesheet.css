@@ -3,7 +3,7 @@
 
 .parallax { 
     /* The image used */
-    background-image: url("tycho.jpg");
+    background-image: url("public/assets/tycho.jpg");
 
     /* Set a specific height */
     height: 500px; 
@@ -20,37 +20,26 @@
     height: 450px;
     margin: auto;
     padding-top: 41px;
-    background-color:lightgrey;
+    background-color: #AEC5EB;
     padding-right: 120px;
   }
   .form-group {
     position: relative;
     padding-top: 1.5rem;
-    display: block;
-    margin-right: 291px;
-    margin-left: 373px;
-    padding-left: 178px;
-    font-family: monospace;
-    width: 267px;
-    height: 25px;
 }
 
 label {
-    position: right;
+    position: absolute;
     top: 0;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-small);
     opacity: 1;
     transform: translateY(0);
     transition: all 0.2s ease-out;
-    font-family: monospace;
 }
 
 input:placeholder-shown + label {
     opacity: 0;
     transform: translateY(1rem);
-    font-family: monospace;
-    
-    
 }
 
 .ul {
@@ -58,8 +47,7 @@ input:placeholder-shown + label {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:lightgrey;
-    font-family: monospace;
+    background-color: #AEC5EB;
 }
 
 .li {
@@ -68,15 +56,13 @@ input:placeholder-shown + label {
 
 .li a {
     display: block;
-    color: rgb(29, 26, 26);
+    color: 	#6d6a6a;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: monospace;
-
 }
 
 .li a:hover {
-    background-color: rgb(129, 127, 127);
+    background-color: #D4C5E2;
 }
 

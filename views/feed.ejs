@@ -9,8 +9,9 @@
     </head>
     <body>
             <h1>Bulletin Board</h1>
-            <% input.forEach(function(input){ %>
-                <li> <%= input %></li> 
+            <% empty.forEach(function(result){ %>
+                <li> <%= result.title %></li> 
+                <li> <%= result.body %></li> 
                 <% }); %>
     
     </body>

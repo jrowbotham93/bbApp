@@ -19,22 +19,29 @@ app.get('/', function (req, res){
      res.render('index') 
 })
 
-app.get('./feed', function (req, res){
+app.get('/feed', function (req, res){
 
-//    const allText = 'SELECT * FROM messages';
+
+const empty = [];
+const allText = ('SELECT * FROM messages')
   
-//    pool.query(allText,(err,res) => {
-//     if(err){
-//         console.log(err.stack);
-//     } else {
-//         console.log(res.rows[0]);       
-//     }}
-//     )
-        res.render('./feed')
-    })
-     
+   pool.query(allText, empty, (err,response) => {
+    if(err){
+        console.log(err.stack);
+    } else{
+        console.log(res.rows);   
     
-app.post('/index', function (req, res){
+    
+    let result = response.rows;
+    empty.push(result)
+
+
+  res.render('feed', {empty: result})
+}
+ })
+})
+      
+app.post('/feed', function (req, res){
 
     var input = [ 
         req.body.title,
@@ -50,7 +57,7 @@ app.post('/index', function (req, res){
             }   
          
        })
-       res.render('./feed', {input: input})
+       res.redirect('feed')
     })
 
 app.listen(port, () => console.log(`Example ${port}!`))
