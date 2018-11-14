@@ -36,8 +36,10 @@ const allText = ('SELECT * FROM messages')
     empty.push(result)
 
 
-  res.render('feed', {empty: result})}
- })})
+  res.render('feed', {empty: result})
+}
+ })
+})
       
 app.post('/feed', function (req, res){
 

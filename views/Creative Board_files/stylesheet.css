@@ -1,0 +1,68 @@
+
+
+
+.parallax { 
+    /* The image used */
+    background-image: url("public/assets/tycho.jpg");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    flex-basis: 32%;
+    height: 450px;
+    margin: auto;
+    padding-top: 41px;
+    background-color: #AEC5EB;
+    padding-right: 120px;
+  }
+  .form-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #AEC5EB;
+}
+
+.li {
+    float: center;
+}
+
+.li a {
+    display: block;
+    color: 	#6d6a6a;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.li a:hover {
+    background-color: #D4C5E2;
+}
+
