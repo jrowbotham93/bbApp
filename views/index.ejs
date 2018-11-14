@@ -7,29 +7,43 @@
         <link href= "/public/assets/stylesheet.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-            
-            <ul class ="ul">
-                    <li class= "li"><a class="active" href="#home">Home</a></li>
-                    <li class= "li"><a href="#news">Feed</a></li>
+            <div class="parallax">   
+        <nav class="navbar">
                 
-            </ul>
-
-    <div class="parallax"></div>
-    <div class= "container">
-        
+                <span class="burger" onclick="openNav()">&#9776;</span>    
+          </nav>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="http://localhost:3000/">Home</a>
+                    <a href="http://localhost:3000/feed">Creative Board</a>
+                </div>
+            
+    </ul>
+</div>
+   
+    <div class="parallax1">   
             <div class="form-group">
                 <form action= '/feed' method='post'>
-                    <input type= "text" for="dynamic-label-input" placeholder= "Enter Your Title Here" name='title'><label for="dynamic-label-input">Keep it short and snappy</label>
+                    <input type= "text" for="dynamic-label-input" placeholder= "What's your idea?" style= "width:200px; height:50px; padding-left: 93px;margin-left: 56px; font-family: monospace" name='title'><label for="dynamic-label-input">Keep it short</label>
                     <br><br>
-                    <input type= "text" for="dynamic-label-input" placeholder= "Message" name='body'placeholder= "Enter Your Title Here" name='title'><label for="dynamic-label-input">Get creative</label>
+                    <input type= "text" for="dynamic-label-input" placeholder= "Message" name='body'placeholder= "Explain it"style= "width:429px; height:200px; margin-left: -194px;padding-left: 378px; font-family: monospace" name='title'><label for="dynamic-label-input">Get creative</label>
                     <br><br>
-                    <input type='submit' class="li" placeholder='submit'>
-                </form>      
-        </div></div>
+                    <input type='submit' id="submit" placeholder='submit'style= "width: 100px; margin-left: 161px; padding-left:23px">
+                </form>
+            </div>
+                      
     <div class="parallax"></div>
-
-
     </body>
+    <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+    </script>
+
     <footer>
     </footer>
 </html> 
