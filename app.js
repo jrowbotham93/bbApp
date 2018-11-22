@@ -27,7 +27,7 @@ const allText = ('SELECT * FROM messages')
   
    pool.query(allText, empty, (err,response) => {
     if(err){
-        console.log(err.stack);
+        console.log(err.stack ("no connect"));
     } else{
         console.log(res.rows);   
     
@@ -35,27 +35,34 @@ const allText = ('SELECT * FROM messages')
     let result = response.rows;
     empty.push(result)
 
+    
+console.log(result)
+
+
 
   res.render('feed', {empty: result})
-}
- })
+         }
+    })
 })
+
+// connection.sync(
+//     {force: false})
       
 app.post('/feed', function (req, res){
 
     var input = [ 
         req.body.title,
-        req.body.body,]
+        req.body.body]
 
     const text = ('INSERT INTO messages (title, body) values ($1 , $2)')
 
-        pool.query(text, input ,(err, res) => {
+        pool.query(text, input, (err, res) => {
             if (err) {
                console.log(err.stack)
             } else {
                console.log(res.rows[0]);       
             }   
-         
+           
        })
        res.redirect('feed')
     })

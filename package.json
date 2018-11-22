@@ -1,18 +1,19 @@
 {
   "name": "bbapp",
   "version": "1.0.0",
-  "description": "Bulletin Board Application",
+  "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "James",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "pg": "^7.6.0",
-    "psql": "0.0.1"
-  }
+    "pg": "^7.6.1",
+    "psql": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
