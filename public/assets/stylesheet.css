@@ -1,14 +1,13 @@
 
+html{
+    border: 0; 
+}
 
 
-.parallax { 
+.parallax-a { 
     /* The image used */
     background-image: url("tycho.jpg");
-
-    /* Set a specific height */
-    height: 571px; 
-
-    /* Create the parallax scrolling effect */
+    height: 700px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,53 +15,95 @@
 
 }
 
-.parallax1 {
-        /* The image used */
+.parallax-b {
         background-image: url("image1.jpg");
-    
-        /* Set a specific height */
-        height: 600px; 
-        
-    
-        /* Create the parallax scrolling effect */
+        height: 700px; 
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-  
-  .form-group {
-    position: relative;
-    height: 410px;
-    padding-top: 43px;
-    display: block;
-    margin-right: 291px;
-    margin-left: 373px;
-    padding-left: 51px;
+h1{
+ 
+    font-size: 38px;
     font-family: monospace;
-    width: 600px;
+    margin-top: 70px;
+    max-width: 279px;
+    font-weight: lighter;
+    color: #828a81;
+
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+
+}
+  
+.form-group {
+     display: flex;
+     justify-content: center;
+     margin-top: 70px;
     
 }
 
-label {
-    position: right;
-    top: 0;
-    font-size: large;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.2s ease-out;
+.input-a{
+    width: 100%;
+    height: 50px;
+    text-align: center;
     font-family: monospace;
+    font-size: xx-large;
+    
+
 }
 
-input:placeholder-shown + label {
-    opacity: 0;
-    transform: translateY(1rem);
+.input-b{
+    width: 100%;
+    height: 200px;
+    text-align: center;
     font-family: monospace;
+    font-size: xx-large;
 
 
+}
+
+#submit{
+    font-family: monospace;
+    background-color: rgb(163, 170, 163);
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 
 
+    }
+    
+    #submit:hover, .input-a:hover, .input-b:hover {
+        opacity: 0.3;
+     
+    }
+
+    /* BEFORE PAGE LOADS DISPLAY LOGO */
+
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; } 
+    .preLoad {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url("/public/assets/moon.png") center no-repeat rgb(255, 255, 255);
+    
+    
     /* nav bar*/
     
   }  .navbar {
@@ -133,66 +174,38 @@ input:placeholder-shown + label {
 
             /*NAV end */
 
-            /*TABLE start */
 
-        .containerTable{
-            background-color: #e7e4e4;
-            padding-top: 75px;
-            padding-bottom: 75px;
-          
+        .table{
 
+            border-collapse: collapse;
+            width: 50%;
+            font-family: monospace;
+            font-size: large;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        
         }
 
-.table{
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
 
-    border-collapse: collapse;
-    width: 50%;
-    margin-left: 332px;
-    font-family: monospace;
-    font-size: large;
-   
-}
+        tr:nth-child(even){
+            background-color: #f2f2f2
+        }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
+        th {
+            background-color: rgb(218, 204, 129);
+            color: white;
+        }
 
-tr:nth-child(even){
-    background-color: #f2f2f2
-}
+        tr:hover {
+                background-color: rgb(197, 195, 195);
+            }
 
-th {
-    background-color: rgb(218, 204, 129);
-    color: white;
-}
 
-tr:hover {
-        background-color: rgb(197, 195, 195);
-    }
 
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
+
+
+
