@@ -4,8 +4,8 @@
         <title>
             Creative Board
         </title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href= "/public/assets/stylesheet.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Quicksand|Work+Sans" rel="stylesheet">
     </head>
     <div class="preLoad"></div>
         <body>
@@ -22,7 +22,7 @@
             <div class = "parallax-a"></div> 
             
             <div class = "container">
-                <h1>a safe place for ideas concepts comments notes observations stories</h1>
+                <h1> <strong> Creative Board </strong> This is a safe place for ideas, concepts, comments, notes, observations, stories</h1>
                     <div class="form-group">
                             <form action= '/feed' method='post'>
                                 <input class="input-a" type= "text" for="dynamic-label-input" placeholder= "What's your idea?" name='title'>
@@ -33,26 +33,45 @@
                             </form>
                         </div>
                     </div>
-                <div class = "parallax-b"></div> 
-            </body>
-  
-    <script>
-        $(document).ready(function (){
+                <div class = "parallax-b"></div>
+                    <div class="grid">
+                        <div class="box a">
+                            <div class="grid-content">
+                                <p>We use css grid and flex box to gain complete control of a page layout. We use parallax for the cool blend in and out effect you see on scroll.</p>
+                            </div>
+                        </div>
+                    <div class="box b">
+                         <div class="heading-grid-content">
+                              <h2>BOARD</h2>
+                        </div>
+                    </div>
+                        <div class="box c">
+                            <div class="heading-grid-content">
+                                <h2>CREATIVE</h2>
+                            </div>
+                        </div> 
+                    </div>  
+                
+                <div class = "parallax-a"></div>
+                    <footer>
+                    
+                     </footer>
+                
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $(window).on('load', function() {
+                    $(".preLoad").fadeOut(2000);
+                });
+                })  
 
-        $(window).on('load', function() {
-            $(".preLoad").fadeOut(2000);
-        });
-        })  
+            function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
 
-        function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-
-        function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-    </script>
-
-    <footer>
-    </footer>
+            function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+    </body>
 </html> 

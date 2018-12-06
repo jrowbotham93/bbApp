@@ -1,12 +1,23 @@
 
-html{
+html {
     border: 0; 
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    background-color: #f4f7f3;
+
 }
 
 
 .parallax-a { 
     /* The image used */
-    background-image: url("tycho.jpg");
+    background-image: url("/public/images/tycho.jpg");
     height: 700px; 
     background-attachment: fixed;
     background-position: center;
@@ -16,7 +27,7 @@ html{
 }
 
 .parallax-b {
-        background-image: url("image1.jpg");
+        background-image: url("/public/images/image1.jpg");
         height: 700px; 
         background-attachment: fixed;
         background-position: center;
@@ -24,10 +35,10 @@ html{
         background-size: cover;
     }
 
-h1{
+h1 {
  
     font-size: 38px;
-    font-family: monospace;
+    font-family: 'Inconsolata', monospace;
     margin-top: 70px;
     max-width: 279px;
     font-weight: lighter;
@@ -36,19 +47,12 @@ h1{
 }
 
 
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 500px;
-    overflow: scroll;
-
-}
   
 .form-group {
      display: flex;
      justify-content: center;
      margin-top: 70px;
+     
     
 }
 
@@ -56,8 +60,9 @@ h1{
     width: 100%;
     height: 50px;
     text-align: center;
-    font-family: monospace;
+    font-family: 'Inconsolata', monospace;
     font-size: xx-large;
+    box-shadow: 4px 4px #888888;
     
 
 }
@@ -66,14 +71,15 @@ h1{
     width: 100%;
     height: 200px;
     text-align: center;
-    font-family: monospace;
+    font-family: 'Inconsolata', monospace;
     font-size: xx-large;
+    box-shadow: 4px 4px #888888;
 
 
 }
 
 #submit{
-    font-family: monospace;
+    font-family: 'Inconsolata', monospace;
     background-color: rgb(163, 170, 163);
     font-size: 15px;
     color: #FFFFFF;
@@ -81,11 +87,12 @@ h1{
     text-align: center;
     display: block;
     margin: 0 auto;
+    box-shadow: 4px 4px #888888;
 
 
     }
     
-    #submit:hover, .input-a:hover, .input-b:hover {
+#submit:hover, .input-a:hover, .input-b:hover {
         opacity: 0.3;
      
     }
@@ -101,34 +108,24 @@ h1{
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url("/public/assets/moon.png") center no-repeat rgb(255, 255, 255);
-    
+	background: url("/public/images/moon.png") center no-repeat rgb(255, 255, 255);
+
+  }  
     
     /* nav bar*/
     
-  }  .navbar {
-        padding: 20px 0px;
+  
+.navbar {
         margin-bottom: 0px;
-        background-color: white;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
-
-  }   .logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+       background-color: #f4f7f3;
+    }   
     
-
-    .burger {
+.burger {
         font-size: 30px;
-        cursor: pointer;
-
-
-        
+        cursor: pointer;  
     }
 
-
-    .sidenav {
+.sidenav {
         height: 100%;
         width: 0;
         position: fixed;
@@ -139,10 +136,10 @@ h1{
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
-        font-family: monospace;
+        font-family: 'Quicksand', sans-serif;
     }
 
-    .sidenav a {
+.sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 16px;
@@ -152,11 +149,11 @@ h1{
         cursor: pointer;
     }
 
-    .sidenav a:hover {
+.sidenav a:hover {
         color: #c4c0c0;
     }
 
-    .sidenav .closebtn {
+.sidenav .closebtn {
         position: absolute;
         top: 0;
         right: 25px;
@@ -164,25 +161,26 @@ h1{
         margin-left: 50px;
     }
 
-        .sidenav {
+.sidenav {
             padding-top: 15px;
         }
 
-        .sidenav a {
+.sidenav a {
             font-size: 18px;
-        }
+}
+
 
             /*NAV end */
 
+.table{
 
-        .table{
-
-            border-collapse: collapse;
-            width: 50%;
-            font-family: monospace;
-            font-size: large;
-            margin-top: 50px;
-            margin-bottom: 50px;
+        border-collapse: collapse;
+        width: 50%;
+        font-family: 'Quicksand', sans-serif;
+        font-size: large;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #494646;
         
         }
 
@@ -204,8 +202,61 @@ h1{
                 background-color: rgb(197, 195, 195);
             }
 
+    
+    .grid{
+        height: 500px;
+        width: 100%;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr  1fr;
+
+    }
+
+    .box {
+        border:none;
+        
+    }
+
+      .a {
+        grid-row: 1 / span 4;
+        grid-column: 1;
+        background-color: #357f82;
+       
+      }
+
+      .b {
+        
+        grid-row: 2 /span 6;
+        grid-column: 2/ span 5;
+        background-color: #e8716d;
+      }
+      .c {
+        grid-row: 1/2;
+        grid-column: 2 / span 5;
+        background-color: #ec8481;
+      }
 
 
+
+      .grid-content{
+        display:flex;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        background-color: #f4f7f3;
+        padding-left:20px;
+        margin: 20px 20px;
+    
+    }
+
+    .heading-grid-content{
+        display: flex;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 50px;
+        color: #357f82;
+
+    }
+    
 
 
 
