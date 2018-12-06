@@ -5,45 +5,73 @@
             Creative Board
         </title>
         <link href= "/public/assets/stylesheet.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Quicksand|Work+Sans" rel="stylesheet">
     </head>
-    <body>
-            <div class="parallax">   
-        <nav class="navbar">
-                
-                <span class="burger" onclick="openNav()">&#9776;</span>    
-          </nav>
+    <div class="preLoad"></div>
+        <body>
+            <nav class="navbar">
+                <span class="burger" onclick="openNav()">&#9776;
+                </span>    
+            </nav>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="http://localhost:3000/">Home</a>
                     <a href="http://localhost:3000/feed">Creative Board</a>
                 </div>
             
-    </ul>
-</div>
-   
-    <div class="parallax1">   
-            <div class="form-group">
-                <form action= '/feed' method='post'>
-                    <input type= "text" for="dynamic-label-input" placeholder= "What's your idea?" style= "width:200px; height:50px; padding-left: 93px;margin-left: 56px; font-family: monospace" name='title'><label for="dynamic-label-input">Keep it short</label>
-                    <br><br>
-                    <input type= "text" for="dynamic-label-input" placeholder= "Message" name='body'placeholder= "Explain it"style= "width:429px; height:200px; margin-left: -194px;padding-left: 378px; font-family: monospace"><label for="dynamic-label-input">Get creative</label>
-                    <br><br>
-                    <input type='submit' id="submit" placeholder='submit'style= "width: 100px; margin-left: 161px; padding-left:23px">
-                </form>
-            </div>
-                      
-    <div class="parallax"></div>
-    </body>
-    <script>
+            <div class = "parallax-a"></div> 
+            
+            <div class = "container">
+                <h1> <strong> Creative Board </strong> This is a safe place for ideas, concepts, comments, notes, observations, stories</h1>
+                    <div class="form-group">
+                            <form action= '/feed' method='post'>
+                                <input class="input-a" type= "text" for="dynamic-label-input" placeholder= "What's your idea?" name='title'>
+                                    <br><br>
+                                <input class="input-b" type= "text" for="dynamic-label-input" placeholder= "Describe it" name='body'placeholder= "Explain it">
+                                    <br><br>
+                                <input type='submit' id="submit" placeholder='submit'>
+                            </form>
+                        </div>
+                    </div>
+                <div class = "parallax-b"></div>
+                    <div class="grid">
+                        <div class="box a">
+                            <div class="grid-content">
+                                <p>We use css grid and flex box to gain complete control of a page layout. We use parallax for the cool blend in and out effect you see on scroll.</p>
+                            </div>
+                        </div>
+                    <div class="box b">
+                         <div class="heading-grid-content">
+                              <h2>BOARD</h2>
+                        </div>
+                    </div>
+                        <div class="box c">
+                            <div class="heading-grid-content">
+                                <h2>CREATIVE</h2>
+                            </div>
+                        </div> 
+                    </div>  
+                
+                <div class = "parallax-a"></div>
+                    <footer>
+                    
+                     </footer>
+                
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $(window).on('load', function() {
+                    $(".preLoad").fadeOut(2000);
+                });
+                })  
+
             function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
 
             function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-    </script>
-
-    <footer>
-    </footer>
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+    </body>
 </html> 

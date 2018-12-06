@@ -1,14 +1,24 @@
 
+html {
+    border: 0; 
+}
 
 
-.parallax { 
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    background-color: #f4f7f3;
+
+}
+
+
+.parallax-a { 
     /* The image used */
-    background-image: url("tycho.jpg");
-
-    /* Set a specific height */
-    height: 571px; 
-
-    /* Create the parallax scrolling effect */
+    background-image: url("/public/images/tycho.jpg");
+    height: 700px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,78 +26,106 @@
 
 }
 
-.parallax1 {
-        /* The image used */
-        background-image: url("image1.jpg");
-    
-        /* Set a specific height */
-        height: 600px; 
-        
-    
-        /* Create the parallax scrolling effect */
+.parallax-b {
+        background-image: url("/public/images/image1.jpg");
+        height: 700px; 
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
+h1 {
+ 
+    font-size: 38px;
+    font-family: 'Inconsolata', monospace;
+    margin-top: 70px;
+    max-width: 279px;
+    font-weight: lighter;
+    color: #828a81;
+
+}
+
+
   
-  .form-group {
-    position: relative;
-    height: 410px;
-    padding-top: 43px;
+.form-group {
+     display: flex;
+     justify-content: center;
+     margin-top: 70px;
+     
+    
+}
+
+.input-a{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: xx-large;
+    box-shadow: 4px 4px #888888;
+    
+
+}
+
+.input-b{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: xx-large;
+    box-shadow: 4px 4px #888888;
+
+
+}
+
+#submit{
+    font-family: 'Inconsolata', monospace;
+    background-color: rgb(163, 170, 163);
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100px;
+    text-align: center;
     display: block;
-    margin-right: 291px;
-    margin-left: 373px;
-    padding-left: 51px;
-    font-family: monospace;
-    width: 600px;
+    margin: 0 auto;
+    box-shadow: 4px 4px #888888;
+
+
+    }
     
-}
-
-label {
-    position: right;
-    top: 0;
-    font-size: large;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.2s ease-out;
-    font-family: monospace;
-}
-
-input:placeholder-shown + label {
-    opacity: 0;
-    transform: translateY(1rem);
-    font-family: monospace;
-
-
-
-
-    /* nav bar*/
-    
-  }  .navbar {
-        padding: 20px 0px;
-        margin-bottom: 0px;
-        background-color: white;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
-
-  }   .logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    
-
-    .burger {
-        font-size: 30px;
-        cursor: pointer;
-
-
-        
+#submit:hover, .input-a:hover, .input-b:hover {
+        opacity: 0.3;
+     
     }
 
+    /* BEFORE PAGE LOADS DISPLAY LOGO */
 
-    .sidenav {
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; } 
+    .preLoad {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url("/public/images/moon.png") center no-repeat rgb(255, 255, 255);
+
+  }  
+    
+    /* nav bar*/
+    
+  
+.navbar {
+        margin-bottom: 0px;
+       background-color: #f4f7f3;
+    }   
+    
+.burger {
+        font-size: 30px;
+        cursor: pointer;  
+    }
+
+.sidenav {
         height: 100%;
         width: 0;
         position: fixed;
@@ -98,10 +136,10 @@ input:placeholder-shown + label {
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
-        font-family: monospace;
+        font-family: 'Quicksand', sans-serif;
     }
 
-    .sidenav a {
+.sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 16px;
@@ -111,11 +149,11 @@ input:placeholder-shown + label {
         cursor: pointer;
     }
 
-    .sidenav a:hover {
+.sidenav a:hover {
         color: #c4c0c0;
     }
 
-    .sidenav .closebtn {
+.sidenav .closebtn {
         position: absolute;
         top: 0;
         right: 25px;
@@ -123,76 +161,102 @@ input:placeholder-shown + label {
         margin-left: 50px;
     }
 
-        .sidenav {
+.sidenav {
             padding-top: 15px;
         }
 
-        .sidenav a {
+.sidenav a {
             font-size: 18px;
-        }
+}
+
 
             /*NAV end */
 
-            /*TABLE start */
-
-        .containerTable{
-            background-color: #e7e4e4;
-            padding-top: 75px;
-            padding-bottom: 75px;
-          
-
-        }
-
 .table{
 
-    border-collapse: collapse;
-    width: 50%;
-    margin-left: 332px;
-    font-family: monospace;
-    font-size: large;
-   
-}
+        border-collapse: collapse;
+        width: 50%;
+        font-family: 'Quicksand', sans-serif;
+        font-size: large;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #494646;
+        
+        }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
 
-tr:nth-child(even){
-    background-color: #f2f2f2
-}
+        tr:nth-child(even){
+            background-color: #f2f2f2
+        }
 
-th {
-    background-color: rgb(218, 204, 129);
-    color: white;
-}
+        th {
+            background-color: rgb(218, 204, 129);
+            color: white;
+        }
 
-tr:hover {
-        background-color: rgb(197, 195, 195);
+        tr:hover {
+                background-color: rgb(197, 195, 195);
+            }
+
+    
+    .grid{
+        height: 500px;
+        width: 100%;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr  1fr;
+
     }
 
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
+    .box {
+        border:none;
+        
+    }
+
+      .a {
+        grid-row: 1 / span 4;
+        grid-column: 1;
+        background-color: #357f82;
+       
+      }
+
+      .b {
+        
+        grid-row: 2 /span 6;
+        grid-column: 2/ span 5;
+        background-color: #e8716d;
+      }
+      .c {
+        grid-row: 1/2;
+        grid-column: 2 / span 5;
+        background-color: #ec8481;
+      }
+
+
+
+      .grid-content{
+        display:flex;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        background-color: #f4f7f3;
+        padding-left:20px;
+        margin: 20px 20px;
+    
+    }
+
+    .heading-grid-content{
+        display: flex;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 50px;
+        color: #357f82;
+
+    }
+    
+
+
+

@@ -27,7 +27,6 @@ const allText = ('SELECT * FROM messages')
   
    pool.query(allText, empty, (err,response) => {
     if(err){
-        console.log(err.stack ("no connect"));
     } else{
         console.log(res.rows);   
     
