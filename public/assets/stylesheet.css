@@ -33,7 +33,7 @@ html {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
+}
 
 h1 {
  
@@ -90,17 +90,23 @@ h1 {
     box-shadow: 4px 4px #888888;
 
 
-    }
+}
     
 #submit:hover, .input-a:hover, .input-b:hover {
         opacity: 0.3;
      
-    }
+}
 
     /* BEFORE PAGE LOADS DISPLAY LOGO */
 
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; } 
+    .no-js #loader { display: none; 
+
+    }
+
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; 
+
+    } 
+
     .preLoad {
 	position: fixed;
 	left: 0px;
@@ -110,7 +116,7 @@ h1 {
 	z-index: 9999;
 	background: url("/public/images/moon.png") center no-repeat rgb(255, 255, 255);
 
-  }  
+}  
     
     /* nav bar*/
     
@@ -118,12 +124,12 @@ h1 {
 .navbar {
         margin-bottom: 0px;
        background-color: #f4f7f3;
-    }   
+}   
     
 .burger {
         font-size: 30px;
         cursor: pointer;  
-    }
+}
 
 .sidenav {
         height: 100%;
@@ -137,7 +143,7 @@ h1 {
         transition: 0.5s;
         padding-top: 60px;
         font-family: 'Quicksand', sans-serif;
-    }
+}
 
 .sidenav a {
         padding: 8px 8px 8px 32px;
@@ -147,11 +153,11 @@ h1 {
         display: block;
         transition: 0.3s;
         cursor: pointer;
-    }
+}
 
 .sidenav a:hover {
         color: #c4c0c0;
-    }
+}
 
 .sidenav .closebtn {
         position: absolute;
@@ -159,11 +165,11 @@ h1 {
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
-    }
+}
 
 .sidenav {
             padding-top: 15px;
-        }
+}
 
 .sidenav a {
             font-size: 18px;
@@ -182,71 +188,76 @@ h1 {
         margin-bottom: 50px;
         color: #494646;
         
-        }
+}
 
-        th, td {
+    th, td {
             text-align: left;
             padding: 8px;
-        }
+}
 
-        tr:nth-child(even){
-            background-color: #f2f2f2
-        }
+    tr:nth-child(even){
+    background-color: #f2f2f2
+}
 
-        th {
-            background-color: rgb(218, 204, 129);
-            color: white;
-        }
+    th {
+    background-color: rgb(218, 204, 129);
+    color: white;
+}
 
-        tr:hover {
-                background-color: rgb(197, 195, 195);
-            }
+    tr:hover {
+        background-color: rgb(197, 195, 195);
+}
 
     
-    .grid{
+.grid{
         height: 500px;
         width: 100%;
         display: grid;
         grid-template: 1fr 1fr / 1fr  1fr;
 
-    }
+}
 
-    .box {
+.box {
         border:none;
         
-    }
+}
 
-      .a {
-        grid-row: 1 / span 4;
-        grid-column: 1;
+.a {
+        grid-row: 1/2;
+        grid-column: 1/2;
         background-color: #357f82;
        
-      }
+}
 
-      .b {
-        
-        grid-row: 2 /span 6;
-        grid-column: 2/ span 5;
+.b {
+        grid-row: 2 /3;
+        grid-column: 1/2;
         background-color: #e8716d;
-      }
-      .c {
+}
+
+
+.c {
         grid-row: 1/2;
-        grid-column: 2 / span 5;
+        grid-column: 2 / 3;
         background-color: #ec8481;
-      }
+}
 
 
+.d {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        background-color: #357f82;
+       
 
-      .grid-content{
-        display:flex;
+
+}
+    .heading-grid-content-green{
+        display: flex;
         justify-content: center;
         font-family: 'Quicksand', sans-serif;
-        font-size: 20px;
-        background-color: #f4f7f3;
-        padding-left:20px;
-        margin: 20px 20px;
-    
-    }
+        font-size: 50px;
+        color: #ec8481;
+}
 
     .heading-grid-content{
         display: flex;
@@ -255,7 +266,7 @@ h1 {
         font-size: 50px;
         color: #357f82;
 
-    }
+ }
     
 
 
